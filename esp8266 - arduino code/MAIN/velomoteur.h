@@ -53,6 +53,7 @@ void Clear();
 #endif
 #if USE_SERIAL_DISPLAY
 void InitSerial();
+void DisplaySerialInterrupt();
 void DisplaySerial(TValuesUtiles unValuesUtiles);
 #endif
 void InitVar(TValuesUtiles &unV, TValuesDebug &unVd);

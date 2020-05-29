@@ -5,12 +5,10 @@
 //https://github.com/SolidGeek/VescUart
 
 VescUart UARTVESC;
-#include <SoftwareSerial.h>
-SoftwareSerial serial1(13, 15);
 
 void VescSetup() {
-  serial1.begin(19200);
-  UARTVESC.setSerialPort(&serial1);
+  Serial.begin(115200);
+  UARTVESC.setSerialPort(&Serial);
 }
 
 void VescGetData(TValuesUtiles &unV, TValuesDebug &unVd){

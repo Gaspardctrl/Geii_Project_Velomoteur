@@ -89,6 +89,7 @@ void  Interrupt_Bp (void)
   if(Etat_Bp==false)
   {
     Etat_Bp = 1;
+    DisplaySerialInterrupt();
   }
   else 
   {
