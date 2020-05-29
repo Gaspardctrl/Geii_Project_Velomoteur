@@ -6,10 +6,10 @@
 
 VescUart UARTVESC;
 #include <SoftwareSerial.h>
-SoftwareSerial serial1(10, 11);
+SoftwareSerial serial1(13, 15);
 
 void VescSetup() {
-  serial1.begin(115200);
+  serial1.begin(19200);
   UARTVESC.setSerialPort(&serial1);
 }
 

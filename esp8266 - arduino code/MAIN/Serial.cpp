@@ -4,7 +4,7 @@
 #if USE_SERIAL_DISPLAY
 
 void InitSerial(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println();
   Serial.println("setup");  
 }

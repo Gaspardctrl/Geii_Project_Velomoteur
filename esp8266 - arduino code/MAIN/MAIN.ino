@@ -60,7 +60,7 @@ void loop() {
     if(bUSeSerial){
       DisplaySerial(ValuesUtiles);
       if(!bUseEInk){
-        delay(500);
+        delay(50);
       }
     }
   #endif
