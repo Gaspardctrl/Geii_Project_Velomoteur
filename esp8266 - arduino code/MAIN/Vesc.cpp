@@ -1,22 +1,24 @@
 #include "velomoteur.h"
+#include <Arduino.h>
 #if !USE_SIMULATE_Vesc
 
 //https://github.com/SolidGeek/VescUart
 
 VescUart UARTVESC;
+#include <SoftwareSerial.h>
+SoftwareSerial serial1(3, 4);
 
 void VescSetup() {
-  Serial.begin(115200);
-  while (!Serial) {;}
-  UARTVESC.setSerialPort(&Serial);
+  serial1.begin(19200);
+  UARTVESC.setSerialPort(&serial1);
 }
 
 void VescGetData(TValuesUtiles &unV, TValuesDebug &unVd){
   if ( UARTVESC.getVescValues() ) {
     unV.m_iSpeed = UARTVESC.data.rpm * 60 * D_ROUE_EN_CM/100 * PI / RAPPORT_REDUCTION;
     unV.m_fIntensitee = UARTVESC.data.avgMotorCurrent;
-    unVd.m_fTotalIntensitee = UARTVESC.data.ampHours;
-    unV.m_fCapactee = (CAPACITEE_BAT_EN_Ah - UARTVESC.data.ampHours) / CAPACITEE_BAT_EN_Ah * 100;
+    unVd.m_fTotalIntensitee =  UARTVESC.data.ampHours;
+    unV.m_fCapactee = -10.945 * UARTVESC.data.inpVoltage + 115.13;
 //    if(UARTVESC.data.inpVoltage <= 45.5) {
 //        unV.m_fCapactee = 0;
 //    } else if(UARTVESC.data.inpVoltage <= 46.04) {

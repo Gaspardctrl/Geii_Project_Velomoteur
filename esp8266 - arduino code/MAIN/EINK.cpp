@@ -1,4 +1,5 @@
 #include "velomoteur.h"
+#include <Arduino.h>
 #if USE_EINK_DISPLAY
 
   #if defined (ESP8266)
