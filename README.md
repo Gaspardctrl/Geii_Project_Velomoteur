@@ -8,24 +8,29 @@ Project started une year ago.
 
 ## The vesc :
 
+A vesc is an oppen sourced esc to control multiple types of motor, including brushless and dc.
+
 Documentation:
 
 ```
-some doc
+https://vesc-project.com/,
 
+https://github.com/vedderb/vesc_tool
+
+vesc tool disponible on android or comupter :
+https://vesc-project.com/vesc_tool
 ```
 Authors :
 
 ```
-doc
-
+**vedderb** - [GitHub](https://github.com/vedderb)
 ```
 License:
 
 ```
-no licence
-
+GPL V3 License
 ```
+We are using 
 
 ## The screen EInk :
 
