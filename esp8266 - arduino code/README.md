@@ -32,13 +32,13 @@ no licence
 Documentation:
 
 ```
-some doc
+https://github.com/olikraus/u8g2
 
 ```
 Authors :
 
 ```
-doc
+**olikraus** - [GitHub](https://github.com/olikraus)
 
 ```
 License:
@@ -48,24 +48,24 @@ no licence
 
 ```
 
-## VescTool :
+## VescUart :
 
 Documentation:
 
 ```
-some doc
+https://github.com/SolidGeek/VescUart
 
 ```
 Authors :
 
 ```
-doc
+**SolidGeek** - [GitHub](https://github.com/SolidGeek)
 
 ```
 License:
 
 ```
-no licence
+no licence clearly defined
 
 ```
 
