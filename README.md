@@ -6,6 +6,15 @@ Project, Geii : realisation of an electric bike using arduino vesc and an old ve
 Final objective : hit the road safely.
 Project started une year ago.
 
+The ‘vélomoteur’ project is the modification of an old 60’s petrol-based Caddy mopeds.
+The base objective was to convert it to a powerful electric bike. For that, we integrated a 1000W brushless DC motor and a home-made battery. We also used an open-sourced controller for the motor, that carry almost all parameters to optimize order send through the three phases.
+
+To upgrade the user experience, we choose to integrate a microcontroller and a screen, and we hope that in the end, we will end up with smooth control of the throttle, start-ups, and speed. 
+The screen is an e-ink type, the same type as in reading tablets and it gives us the ability to display images even when power is cut. For example, when the bike is key-locked, it can display a lock logo without draining any power.
+
+In the end, this project was a good way to work on multiple fields of GEII, like software engineering, energy, automatism, and more. And most importantly, the practical part of it helped us a lot to understand a lot of things.
+
+
 ## The vesc :
 
 A vesc is an oppen sourced esc to control multiple types of motor, including brushless and dc.
