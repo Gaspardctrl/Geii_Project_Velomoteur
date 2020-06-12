@@ -1,6 +1,6 @@
 ## Project Velomoteur :
 
-![alt text](https://github.com/Gaspardctrl/Geii_Project_Velomoteur/pictures/)
+![alt text](https://github.com/Gaspardctrl/Geii_Project_Velomoteur/blob/master/Annexe/photo%20et%20vid%C3%A9o/Velomoteur%20d'origine.jpg)
 
 Project, Geii : realisation of an electric bike using arduino vesc and an old velomoteur.
 Final objective : hit the road safely.
@@ -14,6 +14,23 @@ The screen is an e-ink type, the same type as in reading tablets and it gives us
 
 In the end, this project was a good way to work on multiple fields of GEII, like software engineering, energy, automatism, and more. And most importantly, the practical part of it helped us a lot to understand a lot of things.
 
+## ChangeLog
+* v2.1
+    * Added files
+    * changes :
+      * reorganisation
+      * update arduino code
+      * update vesc motor config
+* v1
+    * First commit
+    * changes :
+      * added arduino code
+      * added vesc doc
+
+## Authors
+
+* **Gaspard Misery** - *Geii student* - [GitHub](https://github.com/GaspardCtrl)
+* **Hugo Pernet** - *Geii student* - [GitHub](https://github.com/hpernetGEII)
 
 ## The vesc :
 
@@ -37,7 +54,7 @@ Authors :
 License:
 
 ```
-GPL V3 License
+GNU General Public License v3.0
 ```
 We are using 
 
@@ -46,19 +63,19 @@ We are using
 Documentation:
 
 ```
-some doc
+https://github.com/ZinggJM/GxEPD2
 
 ```
 Authors :
 
 ```
-doc
+**ZinggJM** - [GitHub](https://github.com/ZinggJM)
 
 ```
 License:
 
 ```
-no licence
+GNU General Public License v3.0
 
 ```
 
@@ -67,53 +84,22 @@ no licence
 Documentation:
 
 ```
-some doc
+https://github.com/esp8266/Arduino
 
 ```
 Authors :
 
 ```
-doc
+**esp8266** - [GitHub](https://github.com/esp8266)
 
 ```
 License:
 
 ```
-no licence
+GNU Lesser General Public License v2.1
 
 ```
 
-## ChangeLog
-* v1
-    * First commit
-    * changes :
-      * added arduino code
-      * added vesc doc
 
-## Authors
 
-* **Gaspard Misery** - *Geii student* - [GitHub](https://github.com/GaspardCtrl)
-* **Hugo Pernet** - *Geii student* - [GitHub](https://github.com/hpernetGEII)
-
-### Installing
-
-What things you need to install the software and how to run :
-
-```
-  Prerequisites : 
-```
-
-```
-  Instalation : 
-```
-
-## Running the bike
-
-```
-  You need to check : 
-```
-
-### Referencies :
-
-Uses of :
 
