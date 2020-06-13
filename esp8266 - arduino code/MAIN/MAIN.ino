@@ -1,12 +1,10 @@
 #include "velomoteur.h"
 
-#define VITESSE_MAX       11000
-#define VITESSE_MIN       5000
+#define VITESSE_MAX       30
+#define VITESSE_MIN       0
 
-const byte Bp1 = 3;
 const uint8_t PotentiometerPin = A0;
-uint16_t Speed = 0;
-bool Etat_Bp = false;
+uint16_t Acceleration = 0;
 
 uint32_t LastTime = 0; 
 
@@ -30,7 +28,6 @@ void setup() {
   #if !USE_SIMULATE_Vesc
     InitVar(ValuesUtiles, ValuesDebug);
     VescSetup();
-    attachInterrupt(digitalPinToInterrupt(Bp1), Interrupt_Bp, CHANGE);
   #endif
   #if USE_SIMULATE_Vesc
     InitSimulate(ValuesUtiles, ValuesDebug);
@@ -66,16 +63,20 @@ void loop() {
   #endif
   #if !USE_SIMULATE_Vesc
     VescGetData(ValuesUtiles, ValuesDebug);
-     if (Etat_Bp==true)
-  {
+
     if((millis() - LastTime) > 10)
     {
-
-      SetRPM(map(analogRead(PotentiometerPin), 0, 1023, VITESSE_MIN, VITESSE_MAX));
-    
+      Acceleration=analogRead(PotentiometerPin);
+      if(Acceleration<20){
+        Acceleration = 0;
+      }
+      else {
+        Acceleration = map(Acceleration, 0, 1023, VITESSE_MIN, VITESSE_MAX);
+      }
+      SetCurrent(Acceleration);
       LastTime = millis();
     } 
-  }
+
  
   #endif
   #if USE_SIMULATE_Vesc
@@ -83,16 +84,3 @@ void loop() {
   #endif
 }
 
-
-void  Interrupt_Bp (void)
- {
-  if(Etat_Bp==false)
-  {
-    Etat_Bp = 1;
-    DisplaySerialInterrupt();
-  }
-  else 
-  {
-    Etat_Bp = 0;
-  }
-}

@@ -45,8 +45,8 @@ void VescGetData(TValuesUtiles &unV, TValuesDebug &unVd){
   }
 }
 
-void SetRPM(float rpm){
-  UARTVESC.setRPM(rpm);
-  //BESOIN D4AJOUTER VERIF DE MAX ET MIN
+// Appel la fonction de la library VESCUART
+void SetCurrent(float Acceleration){
+  VESCUART.setCurrent(Acceleration);
 }
 #endif
